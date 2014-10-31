@@ -14,6 +14,22 @@ class Pessoas_model extends CI_Model {
 		$query = $this->db->get('pessoas');
 		return $query->result();
 	}
+        function editar($idusuario) {
+    $this->db->where('id', $idusuario);
+    $query = $this->db->get('pessoas');
+    return $query->result();
+}
+ 
+function atualizar($data) {
+    $this->db->where('id', $data['id']);
+    $this->db->set($data);
+    return $this->db->update('pessoas');
+}
+ 
+function deletar($idusuario) {
+    $this->db->where('id', $idusuario);
+    return $this->db->delete('pessoas');
+}
 }
  
 /* End of file pessoas_model.php */
