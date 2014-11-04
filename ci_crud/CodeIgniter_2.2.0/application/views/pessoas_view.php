@@ -23,9 +23,9 @@
     <ul>
 	<?php foreach($pessoas as $pessoa): ?>
 	<li>
-	    <a title="Deletar" href="<?php echo base_url() . 'pessoas/deletar/' . $pessoa->idusuario; ?>" onclick="return confirm('Confirma a exclusão deste registro?')">X</a>
+	    <a title="Deletar" href="<?php echo base_url() . 'pessoas/deletar/' . $pessoa->id; ?>" onclick="return confirm('Confirma a exclusão deste registro?')">X</a>
 	    <span> - </span>
-	    <a title="Editar" href="<?php echo base_url() . 'pessoas/editar/' . $pessoa->idusuario; ?>"><?php echo $pessoa->nome; ?></a>
+	    <a title="Editar" href="<?php echo base_url() . 'pessoas/editar/' . $pessoa->id; ?>"><?php echo $pessoa->nome; ?></a>
 	    <span> - </span>
 	    <span><?php echo $pessoa->email; ?></span>
 	</li>

@@ -8,7 +8,7 @@
 <body>
 	<?php echo form_open('pessoas/atualizar', 'id="form-pessoas"'); ?>
  
-	<input type="hidden" name="id" value="<?php echo $dados_pessoa[0]->idusuario; ?>"/>
+	<input type="hidden" name="id" value="<?php echo $dados_pessoa[0]->id; ?>"/>
  
 	<label for="nome">Nome:</label><br/>
 	<input type="text" name="nome" value="<?php echo $dados_pessoa[0]->nome; ?>"/>
