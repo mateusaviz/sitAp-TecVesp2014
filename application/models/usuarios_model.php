@@ -1,34 +1,34 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
  
-class Pessoas_model extends CI_Model {
+class Usuarios_model extends CI_Model {
  
     function __construct() {
         parent::__construct();
     }
  
     function inserir($data) {
-        return $this->db->insert('pessoas', $data);
+        return $this->db->insert('usuarios', $data);
     }
  
 	function listar() {
-		$query = $this->db->get('pessoas');
+		$query = $this->db->get('usuarios');
 		return $query->result();
 	}
         function editar($idusuario) {
-    $this->db->where('id', $idusuario);
-    $query = $this->db->get('pessoas');
+    $this->db->where('idusuario', $idusuario);
+    $query = $this->db->get('usuarios');
     return $query->result();
 }
  
 function atualizar($data) {
-    $this->db->where('id', $data['id']);
+    $this->db->where('idusuario', $data['idusuario']);
     $this->db->set($data);
-    return $this->db->update('pessoas');
+    return $this->db->update('usuarios');
 }
  
 function deletar($idusuario) {
-    $this->db->where('id', $idusuario);
-    return $this->db->delete('pessoas');
+    $this->db->where('idusuario', $idusuario);
+    return $this->db->delete('usuarios');
 }
 }
  
