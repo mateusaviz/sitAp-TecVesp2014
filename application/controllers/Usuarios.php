@@ -65,13 +65,7 @@ class Usuarios extends CI_Controller {
             $data['cep'] = $this->input->post('cep');
             $data['foto'] = $this->input->post('foto');
 
-            /**
-             * TODO: Deve colocar mais campos!!!
-             */
-            /* Carrega o modelo */
-            //$this->load->model('pessoas_model');
-
-            /* Chama a função inserir do modelo */
+           
             if ($this->usuarios_model->inserir($data)) {
                 redirect('usuarios');
             } else {
