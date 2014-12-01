@@ -74,7 +74,6 @@
             <input type="file" name="userfile" value="<?php echo set_value('foto'); ?>"/>
             <div class="error"><?php echo form_error('foto'); ?></div>
 
-            
             <input type="submit" name="cadastrar" value="Cadastrar" />
 
             <?php echo form_close(); ?>

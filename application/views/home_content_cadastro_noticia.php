@@ -1,3 +1,4 @@
+<!-- Content -->
 <div id="content">
     <div class="inner">
 
@@ -14,7 +15,7 @@
             </header>
             <div class="info">
                 <p>Abaixo vai o formulário de cadastro de notícia</p>
-                <p><a href="<?= base_url('login/sair')?>">Sair</a></p>
+                <p><a href="<?= base_url('login/sair') ?>">Sair</a></p>
                 <!--
                         Note: The date should be formatted exactly as it's shown below. In particular, the
                         "least significant" characters of the month should be encapsulated in a <span>
@@ -27,37 +28,39 @@
                 <!--
                         Note: You can change the number of list items in "stats" to whatever you want.
                 -->
-<!--                <ul class="stats">
-                    <li><a href="#" class="icon fa-comment">16</a></li>
-                    <li><a href="#" class="icon fa-heart">32</a></li>
-                    <li><a href="#" class="icon fa-twitter">64</a></li>
-                    <li><a href="#" class="icon fa-facebook">128</a></li>
-                </ul>-->
+                <!--                
+                                <ul class="stats">
+                                    <li><a href="#" class="icon fa-comment">16</a></li>
+                                    <li><a href="#" class="icon fa-heart">32</a></li>
+                                    <li><a href="#" class="icon fa-twitter">64</a></li>
+                                    <li><a href="#" class="icon fa-facebook">128</a></li>
+                                </ul>
+                -->
+            </div><!-- info -->
 
-            </div><!--info-->
+            <?php echo form_open('login', 'id="form-login"'); ?>
+
+            <label for="email">E-mail:</label><br/>
+            <input type="text" name="email" value="<?php echo set_value('email'); ?>"/>
+            <div class="error"><?php echo form_error('email'); ?></div>
+
+            <label for="senha">Senha:</label><br/>
+            <input type="password" name="senha" value="<?php echo set_value('senha'); ?>"/>
+            <div class="error"><?php echo form_error('senha'); ?></div>
+                    
+            <input type="submit" name="login" value="Login" />
+
+            <?php echo form_close(); ?>
             
-              <?php echo form_open('login', 'id="form-login"'); ?>
-        
-        <label for="email">Email:</label><br/>
-        <input type="text" name="email" value="<?php echo set_value('email'); ?>"/>
-        <div class="error"><?php echo form_error('email'); ?></div>
-        
-         <label for="senha">Senha:</label><br/>
-         <input type="password" name="senha" value="<?php echo set_value('senha'); ?>"/>
-        <div class="error"><?php echo form_error('senha'); ?></div>
-        
-        <input type="submit" name="login" value="Login"/>
-        <?php echo form_close(); ?>
-        
+
         </article>
 
-              
 
         <!-- Pagination -->
-       
+
         <div class="pagination">
             <!--<a href="#" class="button previous">Previous Page</a>-->
-           <!--
+            <!--
             <div class="pages">
                 <a href="#" class="active">1</a>
                 <a href="#">2</a>
@@ -67,8 +70,9 @@
                 <a href="#">20</a>
             </div>
             <a href="#" class="button next">Next Page</a>
-           -->
-        </div> <!-- Paginaiton-->
+            -->
+        </div><!-- pagination -->
 
-    </div><!-- content -->
-</div>
+
+    </div><!-- inner -->
+</div><!-- Content -->
